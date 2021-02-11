@@ -1,6 +1,6 @@
 SHELL     = /bin/sh
 PREFIX    = /usr
-THEMENAME = Flat-grey-rounded
+THEMENAME = Polished-Blue
 
 .PHONY: install uninstall watch
 

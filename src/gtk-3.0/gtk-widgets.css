@@ -29,6 +29,7 @@
 *:disabled {
 	text-shadow: 1px 1px @theme_base_color;
 	-gtk-icon-effect: dim;
+	color: #6f6f6f;
 }
 .flat:not(button):not(:hover):not(:checked) {
 	border: 0;
@@ -61,31 +62,30 @@ rubberband {
  * buttons *
  ***********/
 button, .button {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
+	background-image: linear-gradient(to bottom right, #dde2ea, #97a4b4);
+	border: 1px solid #8592a7;
 	border-radius: 3px;
-	padding: .35em;
+	padding: 3px;
 }
 button:hover, .button:hover {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border: 1px solid #8592a7;
+	color: #0f2047;
 }
 button:active, .button:active,
 button:active:hover, .button:active:hover,
 button.toggle:checked,
 button.toggle:active:hover,
 stackswitcher button:checked {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	background-image: linear-gradient(to bottom right, #9fbfe7, #e7effb);
 }
 button:focus, .button:focus {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	border: 1px dotted black;
 }
 button:disabled, .button:disabled {
 	color: #6f6f6f;
-	background-image: linear-gradient(to bottom, white 80%, #e9e8e9);
-	border: 1px solid #A4A7A4;
+	background-image: linear-gradient(to bottom right, #e7e7e7, #afafaf);
+	border: 1px solid #969696;
 }
 button.link {
 	color: @link_color;
@@ -99,41 +99,32 @@ button.color * {
 	min-height: 1.2em;
 }
 button.toggle:checked:disabled  {
-	border: 1px solid #A4A7A4;
+	border: 1px solid #969696;
 }
 
 /**************
  * scrollbars *
  **************/
 scrollbar button {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
-	border-radius: 3px;
 	padding: .35em;
 }
-scrollbar button:hover,
-scrollbar button:active,
-scrollbar button:active:hover {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
-}
-scrollbar button:disabled {
-	color: #6f6f6f;
-	background-image: linear-gradient(to bottom, white 80%, #e9e8e9);
-	border: 1px solid #A4A7A4;
-}
 scrollbar slider {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
-	border-radius: 3px;
+	background-image: linear-gradient(to bottom right, #dde2ea, #97a4b4);
+}
+scrollbar slider:hover {
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
 }
 scrollbar.vertical slider {
 	min-height: .5rem;
 	min-width: .8rem;
+	border-top: 1px solid #8592a7;
+	border-bottom: 1px solid #8592a7;
 }
 scrollbar.horizontal slider {
 	min-height: .8rem;
 	min-width: .5rem;
+	border-left: 1px solid #8592a7;
+	border-right: 1px solid #8592a7;
 }
 scrollbar.vertical button.up {
 	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
@@ -164,25 +155,12 @@ checkbutton label, radiobutton label {
 }
 check:disabled, radio:disabled {
 	color: #6f6f6f;
-	background-image: linear-gradient(to bottom, white 80%, #e9e8e9);
 }
 check {
-	-gtk-icon-source: url("assets/checkbox-unchecked.png");
+	-gtk-icon-source: url("assets/check-off.png");
 }
 check:checked {
-	-gtk-icon-source: url("assets/checkbox-checked.png");
-}
-check:checked:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.png"));
-}
-check:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.png"));
-}
-check:indeterminated {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"));
-}
-check:indeterminated:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.png"));
+	-gtk-icon-source: url("assets/check-on.png");
 }
 
 /******************
@@ -190,19 +168,13 @@ check:indeterminated:disabled {
  ******************/
 radio,
 .view.cellradio {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
+	-gtk-icon-source: -gtk-scaled(url("assets/option-off.png"));
 	margin: .3em .4em .3em .3em;
 	min-height: 1em;
 	min-width: 1em;
 }
 radio:checked {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"));
-}
-radio:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.png"));
-}
-radio:checked:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.png"));
+	-gtk-icon-source: -gtk-scaled(url("assets/option-on.png"));
 }
 
 /****************
@@ -210,11 +182,8 @@ radio:checked:disabled {
  ****************/
 entry {
 	background: @theme_base_color;
-	border-image: url("assets/entry.png") 2 / 2px stretch;
+	border-image: url("assets/depression.png") 2 / 2px stretch;
 	padding: .35em;
-}
-entry:disabled {
-	background-color: #eeebe7;
 }
 
 /****************
@@ -228,7 +197,9 @@ spinbutton * {
 	background: @theme_base_color;
 }
 spinbutton button {
-	background-color: #D2D4D2;
+	background-image: linear-gradient(to bottom right, #dde2ea, #97a4b4);
+	border: 1px solid #8592a7;
+	border-radius: 3px;
 }
 
 /**************
@@ -251,7 +222,7 @@ combobox button:first-child arrow {
  *********/
 
 menubar {
-	border-image: url("assets/button.png") 2 / 2px stretch;
+	border-image: url("assets/bump.png") 2 / 2px stretch;
 	-GtkWidget-window-dragging: true;
 	padding-left: 0.3em;
 }
@@ -262,14 +233,11 @@ menubar decoration,
 menu {
 	background: @theme_bg_color;
 	border: solid 2px;
-	border-image: url("assets/menu.png") 3 / 3px stretch;
+	border-image: url("assets/bump.png") 3 / 3px stretch;
 	padding: 1px;
 }
 menubar > menuitem {
-	margin: 0;
-	padding: .3em .4em;
-	border: 1px solid transparent;
-	border-radius: 3px;
+	margin: 0 0.5em 0 0;
 }
 menubar > menuitem:hover {
 	background-color: #D2D4D2;
@@ -282,11 +250,12 @@ menuitem {
 	border-radius: 3px;
 }
 menuitem:hover {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
+	background-image: linear-gradient(to bottom right, #e7effb, #a1c0e7);
+	border: 1px solid #8592a7;
+	border-radius: 3px;
 }
 menu separator {
-	border-image: url("assets/separator-horizontal.png") 1 / 1px stretch;
+	border-image: url("assets/horizontal-line.png") 1 / 1px stretch;
 	min-height: 1px;
 	margin: .2em .4em;
 }
@@ -310,94 +279,75 @@ notebook {
 	padding: 0;
 }
 notebook.frame {
-	border-image: url("assets/notebook.png") 3 / 3px stretch;
-}
-notebook header {
-	background: @theme_bg_color;
+	border-image: url("assets/bump.png") 2 / 2px stretch;
 }
 notebook header.top {
-	border-image: url("assets/notebook-header-top.png") 2 / 2px stretch;
 	padding-bottom: 2px;
 }
 notebook header.bottom {
-	border-image: url("assets/notebook-header-bottom.png") 2 / 2px stretch;
 	padding-top: 2px;
 }
 notebook header.left {
-	border-image: url("assets/notebook-header-left.png") 2 / 2px stretch;
 	padding-right: 2px;
 }
 notebook header.right {
-	border-image: url("assets/notebook-header-right.png") 2 / 2px stretch;
 	padding-left: 2px;
-}
-notebook header.top tabs {
-	margin-top: 2px;
-}
-notebook header.bottom tabs {
-	margin-bottom: 2px;
-}
-notebook header.left tabs {
-	margin-left: 2px;
-}
-notebook header.right tabs {
-	margin-right: 2px;
 }
 notebook tab,
 notebook.frame > .frame {
-	background: shade(@theme_bg_color, .9);
+	background: #d1d7e3;
 	padding: .3em .4em;
 }
 notebook header.top tab,
 notebook.frame > .frame.top {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
-	border-radius: 3px;
-	padding: 5px;
+	border-image: url("assets/tab-unselected-top.png") 2 / 2px stretch;
+	background-color: #d1d7e3;
+	margin-top: 3px;
 }
 notebook header.bottom tab,
 notebook.frame > .frame.bottom {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
-	border-radius: 3px;
+	border-image: url("assets/tab-unselected-bottom.png") 2 / 2px stretch;
 	padding: 5px;
+	margin-bottom: 3px;
 }
 notebook header.left tab,
 notebook.frame > .frame.left {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
-	border-radius: 3px;
+	border-image: url("assets/tab-unselected-right.png") 2 / 2px stretch;
 	padding: 5px;
+	margin-left: 3px;
 }
 notebook header.right tab,
 notebook.frame > .frame.right {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
-	border-radius: 3px;
+	border-image: url("assets/tab-unselected-left.png") 2 / 2px stretch;
 	padding: 5px;
-}
-notebook header tab:checked,
-notebook.frame > .frame:active {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	margin-right: 3px;
 }
 notebook header.top tab:checked {
-	margin-top: -2px;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border-image: url("assets/tab-selected-top.png") 2 / 2px stretch;
+	margin-top: 0;
 }
 notebook header.bottom tab:checked {
-	margin-bottom: -2px;
-	margin-top: -2px;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border-image: url("assets/tab-selected-bottom.png") 2 / 2px stretch;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 notebook header.left tab:checked {
-	margin-left: -2px;
-	margin-right: -1px;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border-image: url("assets/tab-selected-right.png") 2 / 2px stretch;
+	margin-top: 0;
+	margin-left: 0;
 }
 notebook header.right tab:checked {
-	margin-left: -2px;
-	margin-right: -2px;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border-image: url("assets/tab-selected-left.png") 2 / 2px stretch;
+	margin-top: 0;
+	margin-right: 0;
 }
 notebook tab button {
 	background-color: transparent;
+	background-image: none;
 	border: 1px solid transparent;
 }
 notebook.frame > .frame {
@@ -456,17 +406,22 @@ popover .flat {
  * toolbar *
  ***********/
 toolbar {
-	border-image: url("assets/button.png") 2 / 2px stretch;
-	padding: 1px;
+	border-image: url("assets/bump.png") 2 / 2px stretch;
+	padding: 2px;
 }
 toolbar separator {
-	border-image: url("assets/separator-vertical.png") 1 / 1px stretch;
+	border-image: url("assets/vertical-line.png") 1 / 1px stretch;
 	margin: 5px;
 	padding: 1px;
 }
 toolbar button {
 	background: none;
 	border: 1px solid transparent;
+}
+toolbar button:active,
+toolbar button.toggle:checked {
+	background-image: linear-gradient(to bottom right, #9fbfe7, #e7effb);
+	border: 1px solid #8592a7;
 }
 toolbar button:disabled {
 	background: none;
@@ -485,7 +440,7 @@ statusbar button.toggle:active:hover {
 }
 statusbar frame,
 statusbar > label {
-	border-image: url("assets/statusbar-frame.png") 2 / 2px stretch;
+	border-image: url("assets/depression.png") 2 / 2px stretch;
 }
 statusbar frame {
 	padding: 0;
@@ -506,19 +461,17 @@ list row {
 }
 list row:hover {
 	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
-	border-radius: 3px;
 }
 
 /**************
  * separators *
  **************/
 separator.horizontal {
-	border-image: url("assets/separator-horizontal.png") 1 / 1px stretch;
+	border-image: url("assets/horizontal-line.png") 1 / 1px stretch;
 	padding: 1px;
 }
 separator.vertical {
-	border-image: url("assets/separator-vertical.png") 1 / 1px stretch;
+	border-image: url("assets/vertical-line.png") 1 / 1px stretch;
 	padding: 1px;
 }
 
@@ -526,7 +479,7 @@ separator.vertical {
  * paned *
  *********/
 paned > separator {
-	background: url("assets/paned-separator-vertical.png") no-repeat center;
+	background: url("assets/paned-vertical-separator.png") no-repeat center;
 	-gtk-icon-source: none;
 	padding: 1px;
 }
@@ -545,7 +498,7 @@ frame > border {
 	padding: 2px;
 }
 frame { /* LibreOffice combobox's dropdown */
-	border-image: url("assets/menu.png") 3 / 3px stretch;
+	border-image: url("assets/frame-etched-out.png") 3 / 3px stretch;
 	padding: 3px;
 }
 box > frame {
@@ -571,11 +524,9 @@ scale trough,
 treeview.view.trough,
 treeview.view.trough:selected,
 scrollbar {
-	background-color: shade(@theme_bg_color, .9);
-	border: solid 1px shade(@theme_bg_color, .6);
-	border-bottom-color: white;
-	border-right-color: white;
-	color: @theme_fg_color;
+	background-image: linear-gradient(to bottom right, #b0bac8, #dbe0e7);
+	border: 1px solid #8792a3;
+	border-radius: 3px;
 }
 
 /*********
@@ -585,15 +536,15 @@ scale {
 	margin: 1px;
 }
 scale slider {
-	background-color: @theme_selected_bg_color;
-	border-radius: 3px;
-	border: 1px solid black;
+	background-image: linear-gradient(to bottom right, #dee4eb 5%, #e4e9ef 10%, #9aa7b8);
+}
+scale slider:hover {
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
 }
 scale slider:disabled,
 scale trough:disabled {
-	color: #6f6f6f;
-	background-image: linear-gradient(to bottom, white 80%, #e9e8e9);
-	border: 1px solid #A4A7A4;
+	background-image: linear-gradient(to bottom right, #d4d9e2, #eceff2);
+	border-image: url("assets/scroller-bg.png") 1 / 1px;
 }
 scale.horizontal trough {
 	padding: 0 1.2em;
@@ -602,12 +553,16 @@ scale.vertical trough {
 	padding: 1.2em 0;
 }
 scale.horizontal slider {
-	min-height: 1em;
+	min-height: 0.8em;
 	min-width: 2.4em;
+	border-left: 1px solid #8592a7;
+	border-right: 1px solid #8592a7;
 }
 scale.vertical slider {
 	min-height: 2.4em;
-	min-width: 1em;
+	min-width: 0.8em;
+	border-top: 1px solid #8592a7;
+	border-bottom: 1px solid #8592a7;
 }
 scale.horizontal mark indicator {
 	background-color: @theme_selected_bg_color;
@@ -648,12 +603,16 @@ progressbar {
 	font-size: .8em;
 }
 progressbar trough {
+	background-image: linear-gradient(to bottom right, #d4d9e2, #eceff2);
+	border: 1px solid #b3becc;
+	border-right: 1px solid #fafafa;
+	border-bottom: 1px solid #fafafa;
 	padding: 1px;
 }
 progressbar progress,
 treeview.view.progressbar {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	background-image: linear-gradient(to bottom right, #dde2ea, #97a4b4);
+	border: 1px solid #8592a7;
 	border-radius: 3px;
 }
 progressbar.horizontal,
@@ -678,9 +637,8 @@ levelbar block {
 	padding: 3px;
 }
 levelbar block.filled {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
-	border-radius: 3px;
+	background-image: linear-gradient(to bottom right, #dee4eb 5%, #e4e9ef 10%, #9aa7b8);
+	border: 1px solid #8592a7;
 }
 
 /**********
@@ -694,16 +652,18 @@ switch {
 	border-radius: 3px;
 }
 switch slider {
-	background-color: @theme_selected_bg_color;
-	border: 1px solid black;
+	background-image: linear-gradient(to bottom right, #dde2ea, #97a4b4);
+	border: 1px solid #8592a7;
 	border-radius: 3px;
-	margin: 2px;
-	padding: .3em;
+	padding: 3px;
 }
-switch:checked {
-	background: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
-	border: 1px solid black;
+switch slider:hover {
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	border: 1px solid #8592a7;
+	color: #0f2047;
+}
+switch:checked slider {
+	background-image: linear-gradient(to bottom right, #9fbfe7, #e7effb);
 }
 
 /************
@@ -715,7 +675,6 @@ switch:checked {
 .sidebar,
 scrolledwindow,
 scrolledwindow.frame {
-	border-image: url("assets/frame-etched-out.png") 3 / 3px stretch;
 	padding: 2px;
 }
 
@@ -799,7 +758,7 @@ dialog filechooser .path-bar image {
 	margin-right: 5px;
 }
 dialog filechooser .frame.sidebar separator {
-	border-image: url("assets/separator-horizontal.png") 1 / 1px stretch;
+	border-image: url("assets/horizontal-line.png") 1 / 1px stretch;
 	margin: 3px 5px;
 	padding: 1px;
 }
