@@ -665,10 +665,9 @@ levelbar block.filled {
  * switch *
  **********/
 switch {
-	background-color: shade(@theme_bg_color, .9);
-	border-image: url("assets/button-pressed.png") 3 / 3px stretch;
+	background-image: linear-gradient(to bottom right, #b0bac8, #dbe0e7);
 	min-height: 2em;
-	border: 1px solid transparent;
+	border: 1px solid #8792a3;
 	border-radius: 3px;
 }
 switch slider {
@@ -808,14 +807,12 @@ dialog colorchooser colorswatch.light * {
 	color: black;
 }
 dialog colorchooser #add-color-button {
-	border-image: url("assets/button.png") 3 / 3px stretch;
 }
 dialog colorchooser colorswatch:selected * {
 	background: transparent;
 }
 colorchooser .popover {
 	background: @theme_bg_color;
-	border-image: url("assets/button.png") 3 / 3px stretch;
 }
 
 /****************
