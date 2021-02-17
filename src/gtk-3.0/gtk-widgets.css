@@ -149,6 +149,7 @@ check, radio {
 }
 checkbutton:hover, radiobutton:hover {
 	background-color: @theme_selected_bg_color;
+	color: #0f2047;
 }
 checkbutton label, radiobutton label {
 	padding-right: .5em;
@@ -253,6 +254,7 @@ menuitem:hover {
 	background-image: linear-gradient(to bottom right, #e7effb, #a1c0e7);
 	border: 1px solid #8592a7;
 	border-radius: 3px;
+	color: #0f2047;
 }
 menu separator {
 	border-image: url("assets/horizontal-line.png") 1 / 1px stretch;
@@ -481,6 +483,7 @@ list row {
 }
 list row:hover {
 	background-color: @theme_selected_bg_color;
+	color: #0f2047;
 }
 
 /**************
