@@ -132,19 +132,32 @@ scrollbar.horizontal slider {
 	border-right: 1px solid #8592a7;
 }
 scrollbar.vertical button.up {
-	min-height: 0.5rem;
+	min-height: 0.25rem;
+	border: 0;
+	border-bottom: 1px solid #8592a7;
+	border-radius: 0;
 	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 scrollbar.vertical button.down {
-	min-height: 0.5rem;
+	border: 0;
+	min-height: 0.25rem;
+	border: 0;
+	border-top: 1px solid #8592a7;
+	border-radius: 0;
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 scrollbar.horizontal button.up {
-	min-width: 0.5rem;
+	min-width: 0.25rem;
+	border: 0;
+	border-right: 1px solid #8592a7;
+	border-radius: 0;
 	-gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 scrollbar.horizontal button.down {
-	min-width: 0.5rem;
+	min-width: 0.25rem;
+	border: 0;
+	border-left: 1px solid #8592a7;
+	border-radius: 0;
 	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
