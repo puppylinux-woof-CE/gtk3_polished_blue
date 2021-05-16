@@ -461,6 +461,8 @@ toolbar separator {
 toolbar button {
 	background: none;
 	border: 1px solid transparent;
+	border-radius: 3px;
+	padding: 3px;
 }
 toolbar button:active,
 toolbar button.toggle:checked {
