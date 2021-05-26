@@ -64,6 +64,7 @@ rubberband {
 button.flat {
 	background-color: transparent;
 	border: 1px solid transparent;
+	padding: 3px;
 }
 button:not(.flat) , 
 .button {
@@ -82,6 +83,7 @@ button:active:hover, .button:active:hover,
 button.toggle:checked,
 button.toggle:active:hover,
 stackswitcher button:checked {
+	border: 1px solid #8592a7;
 	background-image: linear-gradient(to bottom right, #9fbfe7, #e7effb);
 }
 button:focus, .button:focus {
