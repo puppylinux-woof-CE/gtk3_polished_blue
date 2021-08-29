@@ -416,14 +416,13 @@ expander arrow:checked {
  * CSD header and window border *
  ********************************/
 headerbar {
-	background-color: #D2D4D2;
-	border: 1px solid #989B98;
+	background-image: linear-gradient(to bottom, #EFEFFF, #95A2B7);
 	border-radius: 3px;
 	padding: 7px;
 }
 decoration {
 	background-color: #D2D4D2;
-	border: 1px solid #989B98;
+	border: 1px solid black;
 }
 
 /****************************
