@@ -417,7 +417,6 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-image: linear-gradient(to bottom, #EFEFFF, #95A2B7);
-	border-radius: 3px;
 	padding: 7px;
 }
 decoration {
