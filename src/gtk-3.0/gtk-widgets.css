@@ -31,7 +31,7 @@
 	-gtk-icon-effect: dim;
 	color: #6f6f6f;
 }
-.flat:not(button):not(:hover):not(:checked) {
+.flat:not(button):not(modelbutton):not(:hover):not(:checked) {
 	border: 0;
 }
 
@@ -441,9 +441,21 @@ decoration {
  ************/
 popover {
 	border: 1px solid #989B98;
+	border-radius: 3px;
 }
 popover .flat {
 	padding: 5px;
+}
+
+modelbutton.flat {
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+modelbutton.flat:hover {
+	border: 1px solid #8592a7;
+	background-image: linear-gradient(to bottom right, #e7effb, #9fbfe7);
+	color: #0f2047;
 }
 
 /***********
