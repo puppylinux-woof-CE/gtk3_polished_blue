@@ -262,15 +262,16 @@ menu {
 	padding: 1px;
 }
 menubar > menuitem {
-	margin: 0 0.5em 0 0;
+	margin: 2px 0.5em 0 0;
+	padding: 0.2em 0.4em;
 }
 menubar > menuitem:hover {
 	background-color: #D2D4D2;
 	border: 1px solid #989B98;
 }
 menuitem {
-	margin: 1px;
-	padding: 3px;
+	margin: 2px;
+	padding: 1px 3px;
 	border: 1px solid transparent;
 	border-radius: 3px;
 }
