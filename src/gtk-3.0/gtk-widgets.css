@@ -270,8 +270,8 @@ menubar > menuitem:hover {
 	border: 1px solid #989B98;
 }
 menuitem {
-	margin: 2px;
-	padding: 1px 3px;
+	margin: 1px;
+	padding: 1px 6px;
 	border: 1px solid transparent;
 	border-radius: 3px;
 }
