@@ -860,8 +860,6 @@ colorchooser .popover {
  ****************/
 printdialog > box > box {
 	padding: 5px;
-}
-printdialog box {
 	background: @theme_bg_color;
 }
 printdialog notebook stack {
