@@ -486,6 +486,9 @@ toolbar button:disabled {
 	background: none;
 	border: 1px solid transparent;
 }
+toolbar entry {
+	margin: 6px;
+}
 /*************
  * statusbar *
  *************/
