@@ -21,6 +21,8 @@
  ***********/
 * {
 	-gtk-icon-style: regular; /* disable symbolic icons */
+	outline: 1px dotted @theme_fg_color;
+	outline-offset: -3px;
 }
 .background {
 	background-color: @theme_bg_color;
