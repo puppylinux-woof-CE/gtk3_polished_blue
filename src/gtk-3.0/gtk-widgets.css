@@ -747,7 +747,7 @@ scrolledwindow.frame {
  ************/
 tooltip,
 tooltip.background  {
-	background-color: white;
+	background-color: @theme_bg_color;
 	border: solid 1px black;
 	color: black;
 }
