@@ -420,7 +420,7 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-image: linear-gradient(to bottom, #EFEFFF, #95A2B7);
-	padding: 7px;
+	padding: 3px;
 }
 decoration {
 	background-color: #D2D4D2;
