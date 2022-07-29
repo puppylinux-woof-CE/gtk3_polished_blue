@@ -418,7 +418,7 @@ expander arrow:checked {
 /********************************
  * CSD header and window border *
  ********************************/
-headerbar {
+headerbar, .titlebar {
 	background-image: linear-gradient(to bottom, #EFEFFF, #95A2B7);
 	padding: 3px;
 }
